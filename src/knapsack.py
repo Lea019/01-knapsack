@@ -16,6 +16,9 @@ class KnapsackInstance:
     @staticmethod
     def from_string(string: str) -> "KnapsackInstance":
         """ """
+        data = string.split("\n")
+        data = [list(map(int, line.split(" "))) for line in string.split("\n")]
+
         W: list[int] = []
         V: list[int] = []
         C: int = 0
@@ -24,7 +27,10 @@ class KnapsackInstance:
 
     @staticmethod
     def load_instance_data(instance_name: str) -> str:
-        return ''
+        with open(f{instance_name}.txt, "r") as f:
+            text = f.read()
+
+        return text
 
     @staticmethod
     def test_instance() -> str:
