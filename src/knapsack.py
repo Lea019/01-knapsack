@@ -19,8 +19,8 @@ class KnapsackInstance:
         data = string.split("\n")
         data = [list(map(int, line.split(" "))) for line in string.split("\n")]
 
-        W: list[int] = []
-        V: list[int] = []
+        weight: list[int] = []
+        value: list[int] = []
         C: int = 0
 
         return KnapsackInstance(W, V, C)
